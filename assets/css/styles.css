@@ -41,8 +41,8 @@ main {
   width: 87%;
   margin: -5rem auto 8.75rem;
   padding: 1.5rem;
-  box-shadow: 0px 50px 48px -35px hsl(275, 100%, 97%),
-    0px 26px 55px -30px hsl(292, 16%, 49%);
+  box-shadow: 0px 50px 48px -35px hsl(275deg 100% 97% / 50%),
+    0px 26px 55px -30px hsl(292deg 16% 49% / 50%);
 }
 .title-container {
   display: flex;
@@ -61,12 +61,14 @@ main {
 .faq-container {
   margin-top: 1.5rem;
 }
+
 summary {
   user-select: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  list-style: none;
   padding: 1.2rem 0;
 }
 summary:focus {
@@ -80,11 +82,17 @@ summary .faq-title {
   font-size: 1rem;
   font-family: "Work-Sans-Bold";
   white-space: break-spaces;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
+details[open],
+summary:focus .faq-title,
 summary:hover .faq-title {
   color: var(--Grayish-purple);
+}
+summary:focus .faq-title,
+summary:hover .faq-title {
   transform: scale(1.02);
+  padding-left: 0.2rem;
 }
 summary img {
   width: 1.96rem;
