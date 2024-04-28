@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-html-css-javascript-DUsct07-EN]
 - Live Site URL: [https://jarher.github.io/faqAccordion/]
 
 ## My process
