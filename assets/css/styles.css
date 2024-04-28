@@ -19,6 +19,7 @@
 html {
   font-size: 16px;
   font-family: "Work-Sans-Regular";
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;
@@ -61,25 +62,33 @@ main {
   margin-top: 1.5rem;
 }
 summary {
+  user-select: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
+}
+summary:focus {
+  border: none;
+  outline: none;
 }
 details:first-child summary {
   padding-top: 0;
-}
-details:last-child summary {
-  padding-bottom: 0;
 }
 summary .faq-title {
   font-size: 1rem;
   font-family: "Work-Sans-Bold";
   white-space: break-spaces;
+  transition: all 0.5s ease-in-out;
+}
+summary:hover .faq-title {
+  color: var(--Grayish-purple);
+  transform: scale(1.02);
 }
 summary img {
-  width: 1.66rem;
-  height: 1.66rem;
+  width: 1.96rem;
+  height: 1.96rem;
   margin-left: 2rem;
 }
 .faq-content {
@@ -92,4 +101,46 @@ summary img {
 hr {
   margin: 0;
   border: 1px solid var(--Light-pink);
+}
+@media (min-width: 1024px) {
+  body {
+    min-height: 100vh;
+  }
+  .top-image {
+    background: url("../images/background-pattern-desktop.svg") no-repeat top
+      center / cover;
+    height: 20rem;
+  }
+  main {
+    width: 42%;
+    margin: -9.5rem auto 8.75rem;
+    border-radius: 1rem;
+    padding: 2.5rem 2.5rem 1rem;
+  }
+  .title-container {
+    gap: 1.4rem;
+  }
+  .title-container h1 {
+    font-size: 3.5rem;
+  }
+  .title-container img {
+    height: 2.56rem;
+    width: 2.56rem;
+  }
+  .faq-container {
+    margin-top: 1.75rem;
+  }
+  summary {
+    padding: 1.4rem 0;
+  }
+  summary .faq-title {
+    font-size: 1.15rem;
+  }
+  summary img {
+    margin-left: 1rem;
+  }
+  .faq-content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
